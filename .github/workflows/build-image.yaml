@@ -33,6 +33,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Unzip files
+        run: |
+          unzip ericw*.zip -d ericw
+          unzip fteqcc*.zip -d fteqcc
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
